@@ -15,7 +15,7 @@
     padding: 20px;
     margin-left: 150px;
     z-index: 2;
-    margin-top: -300px;
+    margin-top: -350px;
 }
 
 .intro h1 {
@@ -77,18 +77,16 @@
     opacity: 0.8; /* Optional overall transparency */
 }
 
-.canvas-container {
+
+
+.three-d-model {
+    position: absolute;
     width: 100%;
-    height: 400px; /* Adjust height as necessary */
-    margin-top: 20px; /* Optional spacing */
+    height: 650px; 
+    margin-left: -100px;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #f0f0f5; /* Optional background for contrast */
-    border-radius: 12px; /* Rounded corners */
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Adding some shadow for aesthetics */
+    background-color: transparent; /* Background color for contrast */
+    overflow: hidden; /* Ensures the content stays within the rounded corners */
 }
-
-
-
-

@@ -1,50 +1,65 @@
 import React from 'react';
+import { Tilt } from "react-tilt";
+import { motion } from "framer-motion";
 import '../assets/styles/about.css'; // Make sure to create a CSS file for custom styling.
+import { fadeIn, textVariant } from "../components/utils/motion";
+
+const ServiceCard = ({ index, title, icon }) => (
+  <Tilt className='service-card'>
+    <motion.div
+      variants={fadeIn("right", "spring", index * 0.5, 0.75)}
+      className='service-card-inner'
+    >
+      <div
+        options={{
+          max: 45,
+          scale: 1,
+          speed: 450,
+        }}
+        className='service-card-content'
+      >
+        <img
+          src={icon}
+          alt={title}
+          className='service-card-icon'
+        />
+        <h3 className='service-card-title'>
+          {title}
+        </h3>
+      </div>
+    </motion.div>
+  </Tilt>
+);
 
 const About = () => {
-    return (
-        <div className="about animate__animated animate__fadeIn" id="about">
-            <h2 className="section-header">Introduction</h2>
-            <h1 className="about-title">About Me.</h1>
-            <p className="about-description">
-                A passionate and adaptable individual with strong leadership skills and a keen interest in new technologies like machine learning, AI, and data science. I thrive in team settings, actively engage in volunteering and sustainable projects, and am dedicated to making a positive impact while continuously expanding my knowledge.
-            </p>
-            <div className="card-grid">
-                <div className="module-border-wrap">
-                    <div className="card">
-                        <div className="card-icon">
-                            <img src="src/assets/images/AIM.png" alt="AI/ML"/>
-                        </div>
-                        <h3 className="card-title">AI/ML Enthusiast</h3>
-                    </div>
-                </div>
-                <div className="module-border-wrap">
-                    <div className="card">
-                        <div className="card-icon">
-                            <img src="src/assets/images/development.png" alt="Frontend"/>
-                        </div>
-                        <h3 className="card-title">Frontend Developer</h3>
-                    </div>
-                </div>
-                <div className="module-border-wrap">
-                    <div className="card">
-                        <div className="card-icon">
-                            <img src="src/assets/images/development.png" alt="Backend"/>
-                        </div>
-                        <h3 className="card-title">Backend Developer</h3>
-                    </div>
-                </div>
-                <div className="module-border-wrap">
-                    <div className="card">
-                        <div className="card-icon">
-                            <img src="src/assets/images/content.png" alt="Content Creator"/>
-                        </div>
-                        <h3 className="card-title">Content Creator</h3>
-                    </div>
-                </div>
-            </div>
-        </div>
-    );
+  const services = [
+    { title: "AI/ML Enthusiast", icon: "src/assets/images/AIM.png" },
+    { title: "Frontend Developer", icon: "src/assets/images/development.png" },
+    { title: "Backend Developer", icon: "src/assets/images/development.png" },
+    { title: "Content Creator", icon: "src/assets/images/content.png" },
+  ];
+
+  return (
+    <div className='about'>
+      <motion.div variants={textVariant()}>
+        <h2 className="section-header">Introduction</h2>
+        <h1 className="about-title">About Me.</h1>
+      </motion.div>
+
+      <motion.p
+        variants={fadeIn("", "", 0.1, 1)}
+        className='about-description'
+      >
+        A passionate and adaptable individual with strong leadership skills and a keen interest in new technologies like machine learning, AI, and data science. I thrive in team settings, actively engage in volunteering and sustainable projects, and am dedicated to making a positive impact while continuously expanding my knowledge.
+      </motion.p>
+
+      <div className='service-cards-container'>
+        {services.map((service, index) => (
+          <ServiceCard key={service.title} index={index} {...service} />
+        ))}
+      </div>
+    </div>
+  );
 };
 
 export default About;
