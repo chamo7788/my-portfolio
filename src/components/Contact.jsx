@@ -52,7 +52,7 @@ export default function Contact() {
     ];
 
     return (
-        <div className="background-video-container">
+        <div id="contact" className="background-video-container">
             {/* Animated Background */}
             <AnimatedBackground />
 
