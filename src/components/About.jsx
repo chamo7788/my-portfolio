@@ -40,7 +40,7 @@ const About = () => {
   ];
 
   return (
-    <div className='about'>
+    <div id="about" className='about'>
       <motion.div variants={textVariant()}>
         <h2 className="section-header">Introduction</h2>
         <h1 className="about-title">About Me.</h1>

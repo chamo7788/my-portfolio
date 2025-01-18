@@ -30,9 +30,9 @@ const Projects = () => {
         { name: "bootstrap4", label: "Bootstrap" },
     ];
     return (
-        <div className="project">
+        <div id="projects" className="project">
             <Timeline position="alternate">
-                <TimelineItem>
+                <TimelineItem className="timeline-item">
                     <TimelineOppositeContent
                         sx={{m: 'auto 0'}}
                         align="right"
@@ -75,7 +75,7 @@ const Projects = () => {
                     </TimelineContent>
                 </TimelineItem>
 
-                <TimelineItem>
+                <TimelineItem className="timeline-item">
                     <TimelineOppositeContent
                         sx={{m: 'auto 0'}}
                         align="right"
@@ -113,7 +113,7 @@ const Projects = () => {
                     </TimelineContent>
                 </TimelineItem>
 
-                <TimelineItem>
+                <TimelineItem className="timeline-item">
                     <TimelineOppositeContent
                         sx={{m: 'auto 0'}}
                         align="right"
@@ -156,7 +156,7 @@ const Projects = () => {
                     </TimelineContent>
                 </TimelineItem>
 
-                <TimelineItem>
+                <TimelineItem className="timeline-item">
                     <TimelineOppositeContent
                         sx={{m: 'auto 0'}}
                         align="right"
@@ -196,7 +196,7 @@ const Projects = () => {
                     </TimelineContent>
                 </TimelineItem>
 
-                <TimelineItem>
+                <TimelineItem className="timeline-item">
                     <TimelineOppositeContent
                         sx={{m: 'auto 0'}}
                         align="right"
@@ -235,7 +235,7 @@ const Projects = () => {
                     </TimelineContent>
                 </TimelineItem>
 
-                <TimelineItem>
+                <TimelineItem className="timeline-item">
                     <TimelineOppositeContent
                         sx={{m: 'auto 0'}}
                         align="right"
@@ -271,7 +271,7 @@ const Projects = () => {
                     </TimelineContent>
                 </TimelineItem>
 
-                <TimelineItem>
+                <TimelineItem className="timeline-item">
                     <TimelineOppositeContent
                         sx={{m: 'auto 0'}}
                         align="right"
